@@ -9,7 +9,8 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
 
 export default function Experience() {
-	const [active, setActive] = useState<StacksData[]>(languagesData);
+	const [active, setActive] = useState<StacksData[] | null>(null);
+	const allStacks = [...languagesData, ...frameworksData, ...toolsData, ...osData];
 
 	useEffect(() => {
 		// if active changes, have a loading state
@@ -56,52 +57,63 @@ export default function Experience() {
 				<div className="my-16 flex h-full w-full flex-col items-center gap-4">
 					<div className="border-dark/50 container flex flex-col overflow-hidden rounded-lg border">
 						<div className="border-dark/50 flex w-full items-center border-b">
-							<div className={`flex-1 p-2 transition duration-500 ${active === languagesData ? 'bg-dark/25' : ''}`}>
+							<div
+								className={`hover:bg-dark/25 flex-1 cursor-pointer p-2 transition duration-500 ${active === languagesData ? 'bg-dark/25' : ''}`}
+							>
 								<p
 									className={`font-main transition-[tracking, decoration] text-center text-2xl tracking-normal underline duration-250 ${active === languagesData ? 'font-bold tracking-widest text-black decoration-black' : 'font-semibold text-black/25 decoration-transparent'}`}
-									onMouseEnter={() => setActive(languagesData)}
-									onClick={() => setActive(languagesData)}
+									onClick={() => {
+										active === languagesData ? setActive(null) : setActive(languagesData);
+									}}
 								>
 									Languages
 								</p>
 							</div>
-							<div className={`flex-1 p-2 transition duration-250 ${active === frameworksData ? 'bg-dark/25' : ''}`}>
+							<div
+								className={`hover:bg-dark/25 flex-1 cursor-pointer p-2 transition duration-500 ${active === frameworksData ? 'bg-dark/25' : ''}`}
+							>
 								<p
 									className={`font-main transition-[tracking, decoration] text-center text-2xl tracking-normal underline duration-250 ${active === frameworksData ? 'font-bold tracking-widest text-black decoration-black' : 'font-semibold text-black/25 decoration-transparent'}`}
-									onMouseEnter={() => setActive(frameworksData)}
-									onClick={() => setActive(frameworksData)}
+									onClick={() => {
+										active === frameworksData ? setActive(null) : setActive(frameworksData);
+									}}
 								>
 									Frameworks
 								</p>
 							</div>
-							<div className={`flex-1 p-2 transition duration-250 ${active === toolsData ? 'bg-dark/25' : ''}`}>
+							<div
+								className={`hover:bg-dark/25 flex-1 cursor-pointer p-2 transition duration-500 ${active === toolsData ? 'bg-dark/25' : ''}`}
+							>
 								<p
 									className={`font-main transition-[tracking, decoration] text-center text-2xl tracking-normal underline duration-250 ${active === toolsData ? 'font-bold tracking-widest text-black decoration-black' : 'font-semibold text-black/25 decoration-transparent'}`}
-									onMouseEnter={() => setActive(toolsData)}
-									onClick={() => setActive(toolsData)}
+									onClick={() => {
+										active === toolsData ? setActive(null) : setActive(toolsData);
+									}}
 								>
 									Tools
 								</p>
 							</div>
-							<div className={`flex-1 p-2 transition duration-250 ${active === osData ? 'bg-dark/25' : ''}`}>
+							<div
+								className={`hover:bg-dark/25 flex-1 cursor-pointer p-2 transition duration-500 ${active === osData ? 'bg-dark/25' : ''}`}
+							>
 								<p
 									className={`font-main transition-[tracking, decoration] text-center text-2xl tracking-normal underline duration-250 ${active === osData ? 'font-bold tracking-widest text-black decoration-black' : 'font-semibold text-black/25 decoration-transparent'}`}
-									onMouseEnter={() => setActive(osData)}
-									onClick={() => setActive(osData)}
+									onClick={() => {
+										active === osData ? setActive(null) : setActive(osData);
+									}}
 								>
 									OS
 								</p>
 							</div>
 						</div>
-						<div className={`flex w-full flex-wrap justify-center gap-4 px-4 py-8 transition duration-500`}>
-							{active.map((stack, index) => (
-								<Link href={stack.url} className="contents" target="_blank" rel="noreferrer">
+						<div className={`flex w-full flex-wrap justify-center gap-4 px-4 py-8`}>
+							{allStacks.map((stack, index) => (
+								<Link href={stack.url} className="contents" target="_blank" rel="noreferrer" key={index}>
 									<div
-										key={index}
-										className="bg-gray border-dark/25 group relative aspect-square h-32 w-auto rounded-lg border p-2 hover:scale-100"
+										className={`bg-gray border-dark/25 group relative aspect-square h-32 w-auto rounded-lg p-2 transition duration-500 ${active && !active.includes(stack) ? 'blur-lg' : ''}`}
 									>
 										<div className="transition-[opacity, color] group-hover:bg-gray relative h-full w-full duration-250 group-hover:opacity-25 group-hover:blur-sm">
-											<Image src={stack.imgSrc} alt={stack.alt} fill className="object-contain" />
+											<Image src={stack.imgSrc} alt={stack.alt} fill className="object-contain" unoptimized={false} />
 										</div>
 										<div className="absolute top-0 left-0 hidden h-full w-full opacity-0 transition-all duration-250 group-hover:flex group-hover:items-center group-hover:justify-center group-hover:opacity-100">
 											<p className="font-secondary text-sm font-semibold text-black">{stack.text}</p>
