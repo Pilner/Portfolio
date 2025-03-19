@@ -2,9 +2,9 @@
 import React, { useState, useEffect } from 'react';
 
 import { Navbar } from '@/_components/semantics/Navbar';
-import Hero from '@/_components/pages/Hero';
+import Experience from '@/_components/pages/Experience';
 
-export default function Page() {
+export default function ExperiencePage() {
 	const [loading, setLoading] = useState<boolean>(true);
 
 	useEffect(() => {
@@ -19,7 +19,7 @@ export default function Page() {
 				className={`h-screen overflow-y-scroll scroll-smooth transition duration-500 ${loading ? 'opacity-0' : 'opacity-100'} ease-in`}
 			>
 				<Navbar />
-				<Hero />
+				<Experience />
 			</main>
 		</>
 	);

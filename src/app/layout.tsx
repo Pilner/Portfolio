@@ -1,14 +1,21 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
 import './globals.css';
 import '@fortawesome/fontawesome-svg-core/styles.css';
-
-const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
 	title: 'Fabian Railey Victuelles | Web Developer',
 	description: 'A portfolio website to showcase my work and skills.',
 	authors: { name: 'Fabian Railey Victuelles' },
+	icons: [
+		{
+			media: '(prefers-color-scheme: dark)',
+			url: '/images/logo/frv-logo-white.png',
+		},
+		{
+			media: '(prefers-color-scheme: light)',
+			url: '/images/logo/frv-logo-black.png',
+		},
+	],
 };
 
 export default function RootLayout({
@@ -19,7 +26,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<head></head>
-			<body className={`bg-gray ${inter.className}`}>{children}</body>
+			<body className={`bg-gray`}>{children}</body>
 		</html>
 	);
 }

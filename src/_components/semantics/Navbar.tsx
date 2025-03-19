@@ -1,35 +1,59 @@
-import Image from 'next/image';
+'use client';
+
+import React from 'react';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 
-import Button from '@/_components/ui/Button';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHouse, faUser, faDiagramProject, faBriefcase } from '@fortawesome/free-solid-svg-icons';
+
+const TabList = [
+	{
+		name: 'hero',
+		icon: faHouse,
+		text: 'Home',
+		url: '/',
+	},
+	{
+		name: 'about',
+		icon: faUser,
+		text: 'About',
+		url: '/about',
+	},
+	{
+		name: 'experience',
+		icon: faBriefcase,
+		text: 'Experience',
+		url: '/experience',
+	},
+	{
+		name: 'projects',
+		icon: faDiagramProject,
+		text: 'Projects',
+		url: '/projects',
+	},
+];
 
 export function Navbar() {
+	const activeTab = usePathname();
+	console.log(activeTab);
+
 	return (
-		<nav className="h-[10rem] border border-red-500">
-			<div className="container flex h-full items-center justify-between border border-red-500">
-				<div className="flex h-full items-center gap-4">
-					<Link href="/" className="contents">
-						<Image src="/images/placeholder.png" alt="Logo" width={100} height={100} className="h-full w-auto" />
-					</Link>
-					<Link href="/">
-						<p>Logo</p>
-					</Link>
-				</div>
-				<ul className="flex h-full items-center gap-8">
-					<Link href="#">
-						<li>First</li>
-					</Link>
-					<Link href="#">
-						<li>Second</li>
-					</Link>
-					<Link href="#">
-						<li>Third</li>
-					</Link>
-					<Link href="#" className="contents">
-						<Button disabled={false}>
-							<p>Button</p>
-						</Button>
-					</Link>
+		<nav className="fixed top-1/2 right-2 z-50 my-auto w-[5rem] -translate-y-1/2 py-4 opacity-25 transition-opacity duration-250 hover:opacity-100">
+			<div className="flex h-full flex-col items-center justify-center">
+				<ul className="flex flex-col gap-16">
+					{TabList.map((tab, index) => (
+						<Link href={tab.url} className="contents" key={`tab-${index}`}>
+							<li
+								className={`group transition-[color, margin] relative z-[200] flex aspect-square h-[3rem] w-[3rem] items-center justify-center rounded-lg border border-black bg-black duration-250 hover:my-2 hover:bg-white hover:text-black ${tab.url === activeTab ? 'cursor-default bg-white text-black' : 'cursor-pointer text-white'}`}
+							>
+								<FontAwesomeIcon icon={tab.icon} />
+								<div className="bg-gray/25 absolute top-1/2 -right-0 z-[199] flex -translate-y-1/2 items-center justify-center rounded-lg p-1 text-black opacity-0 transition-all duration-500 group-hover:right-[125%] group-hover:opacity-100">
+									<p className="text-lg font-normal text-black">{tab.text}</p>
+								</div>
+							</li>
+						</Link>
+					))}
 				</ul>
 			</div>
 		</nav>
