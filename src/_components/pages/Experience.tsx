@@ -110,7 +110,7 @@ export default function Experience() {
 							{allStacks.map((stack, index) => (
 								<Link href={stack.url} className="contents" target="_blank" rel="noreferrer" key={index}>
 									<div
-										className={`bg-gray border-dark/25 group relative aspect-square h-32 w-auto rounded-lg p-2 transition duration-500 ${active && !active.includes(stack) ? 'blur-lg' : ''}`}
+										className={`bg-gray border-dark/25 group relative aspect-square h-32 w-auto rounded-lg p-2 transition duration-500 ${active && !active.includes(stack) ? 'opacity-50 blur-sm grayscale' : ''}`}
 									>
 										<div className="transition-[opacity, color] group-hover:bg-gray relative h-full w-full duration-250 group-hover:opacity-25 group-hover:blur-sm">
 											<Image src={stack.imgSrc} alt={stack.alt} fill className="object-contain" unoptimized={false} />
