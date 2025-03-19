@@ -18,6 +18,18 @@
 	@apply mx-auto w-[90%] sm:w-[85%] lg:w-[80%] xl:w-[75%];
 }
 
+.animation-delay-0 {
+	animation-delay: 0ms;
+}
+
+.animation-delay-1 {
+	animation-delay: 200ms;
+}
+
+.animation-delay-2 {
+	animation-delay: 400ms;
+}
+
 /* hide scrollbar */
 ::-webkit-scrollbar {
 	display: none;

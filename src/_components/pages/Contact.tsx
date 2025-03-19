@@ -11,9 +11,24 @@ export default function Contact() {
 						Give me a <span className="text-sub-accent">call</span>
 					</h1>
 					<div className="absolute bottom-10 flex flex-col">
-						<FontAwesomeIcon size="2xl" color="black" icon={faChevronDown} />
-						<FontAwesomeIcon size="2xl" color="black" icon={faChevronDown} />
-						<FontAwesomeIcon size="2xl" color="black" icon={faChevronDown} />
+						<FontAwesomeIcon
+							size="2xl"
+							color="black"
+							icon={faChevronDown}
+							className="animation-delay-0 animate-pulse"
+						/>
+						<FontAwesomeIcon
+							size="2xl"
+							color="black"
+							icon={faChevronDown}
+							className="animation-delay-1 animate-pulse"
+						/>
+						<FontAwesomeIcon
+							size="2xl"
+							color="black"
+							icon={faChevronDown}
+							className="animation-delay-2 animate-pulse"
+						/>
 					</div>
 				</div>
 			</section>
