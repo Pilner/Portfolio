@@ -10,3 +10,7 @@ export function getAge(birthday: Date) {
 
 	return age;
 }
+
+export async function sleep(ms: number) {
+	return new Promise((resolve) => setTimeout(resolve, ms));
+}

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { usePathname } from 'next/navigation';
-import Link from 'next/link';
+import TransitionLink from '../ui/TransitionLink';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHouse, faUser, faDiagramProject, faBriefcase } from '@fortawesome/free-solid-svg-icons';
@@ -43,7 +43,7 @@ export function Navbar() {
 			<div className="flex h-full flex-col items-center justify-center">
 				<ul className="flex flex-col gap-16">
 					{TabList.map((tab, index) => (
-						<Link href={tab.url} className="contents" key={`tab-${index}`}>
+						<TransitionLink href={tab.url} className="contents" key={`tab-${index}`} disabled={tab.url === activeTab}>
 							<li
 								className={`group transition-[color, margin] relative z-[200] flex aspect-square h-[3rem] w-[3rem] items-center justify-center rounded-lg border border-black bg-black duration-250 hover:my-2 hover:bg-white hover:text-black ${tab.url === activeTab ? 'cursor-default bg-white text-black' : 'cursor-pointer text-white'}`}
 							>
@@ -52,7 +52,7 @@ export function Navbar() {
 									<p className="text-lg font-normal text-black">{tab.text}</p>
 								</div>
 							</li>
-						</Link>
+						</TransitionLink>
 					))}
 				</ul>
 			</div>
