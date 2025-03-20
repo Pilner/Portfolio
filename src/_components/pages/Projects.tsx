@@ -1,55 +1,11 @@
 import React from 'react';
-import Card, { CardProps } from '@/_components/ui/Card';
+import Link from 'next/link';
+import Card from '@/_components/ui/Card';
 import Button from '@/_components/ui/Button';
+import { projectData } from '@/_data/data';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import Link from 'next/link';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
-
-const sampleData: CardProps[] = [
-	{
-		title: 'ParaPo',
-		description: 'This is a description of the project',
-		imageSrc: '/images/placeholder.png',
-		link: '#',
-	},
-	{
-		title: 'Atomix',
-		description: 'This is a description of the project',
-		imageSrc: '/images/placeholder.png',
-		link: '#',
-	},
-	{
-		title: 'PC Timer',
-		description: 'This is a description of the project',
-		imageSrc: '/images/placeholder.png',
-		link: '#',
-	},
-	{
-		title: 'Aircamp',
-		description: 'This is a description of the project',
-		imageSrc: '/images/placeholder.png',
-		link: '#',
-	},
-	{
-		title: 'Aircamp',
-		description: 'This is a description of the project',
-		imageSrc: '/images/placeholder.png',
-		link: '#',
-	},
-	{
-		title: 'Aircamp',
-		description: 'This is a description of the project',
-		imageSrc: '/images/placeholder.png',
-		link: '#',
-	},
-	{
-		title: 'Aircamp',
-		description: 'This is a description of the project',
-		imageSrc: '/images/placeholder.png',
-		link: '#',
-	},
-];
 
 export default function Projects() {
 	return (
@@ -81,11 +37,11 @@ export default function Projects() {
 					</div>
 				</div>
 			</section>
-			<section className="min-h-screen w-full">
+			<section className="w-full">
 				<div className="container my-16 flex h-full w-full flex-col">
 					<div className="h-full">
 						<div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-							{sampleData.map((data, index) => (
+							{projectData.map((data, index) => (
 								<Card key={index} {...data} />
 							))}
 						</div>
@@ -93,7 +49,7 @@ export default function Projects() {
 							<Link href="https://github.com/Pilner" className="contents" target="_blank" rel="noreferrer">
 								<Button variant="outline">
 									<p className="flex items-center gap-2 text-lg">
-										<FontAwesomeIcon icon={faGithub} /> View More
+										<FontAwesomeIcon icon={faGithub} /> More on Github
 									</p>
 								</Button>
 							</Link>
