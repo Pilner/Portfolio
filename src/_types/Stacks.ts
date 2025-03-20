@@ -1,4 +1,4 @@
-export type StacksData = {
+export type TStacks = {
 	url: string;
 	alt: string;
 	imgSrc: string;

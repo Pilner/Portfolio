@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface TextInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+interface TextInputProps {
 	type?: string;
 	label?: string;
 	children?: React.ReactNode;
@@ -8,7 +8,7 @@ interface TextInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	error?: string;
 	name?: string;
 	value?: string | number;
-	onChange?: (value: any) => void;
+	onChange?: (value: string) => void;
 }
 
 export function TextInput({
@@ -59,7 +59,7 @@ export function TextInput({
 	);
 }
 
-interface DropdownInputProps extends React.InputHTMLAttributes<HTMLSelectElement> {
+interface DropdownInputProps {
 	label?: string;
 	children?: React.ReactNode;
 	placeholder?: string;
@@ -67,7 +67,7 @@ interface DropdownInputProps extends React.InputHTMLAttributes<HTMLSelectElement
 	name?: string;
 	options?: { label: string; value: string | number }[];
 	value?: string | number;
-	onChange?: (value: any) => void;
+	onChange?: (value: string | number) => void;
 }
 
 export function DropdownInput({
