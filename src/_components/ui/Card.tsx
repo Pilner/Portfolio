@@ -1,15 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { TCard } from '@/_types/Card';
 
-export interface CardProps {
-	title: string;
-	description: string;
-	imageSrc: string;
-	link: string;
-}
-
-export default function Card({ title, description, imageSrc, link }: CardProps) {
+export default function Card({ title, description, imageSrc, link }: TCard) {
 	return (
 		<div className="rounded-lg bg-white p-4 shadow-lg">
 			<div className="group relative overflow-hidden rounded-lg border border-black/10">
@@ -18,12 +12,12 @@ export default function Card({ title, description, imageSrc, link }: CardProps) 
 						<Image fill src={imageSrc} alt={title} className="w-full object-cover" />
 					</div>
 				</div>
-				<div className="absolute top-0 left-0 hidden h-full w-full opacity-0 transition-all duration-250 group-hover:flex group-hover:items-center group-hover:justify-center group-hover:opacity-100">
-					<p className="font-secondary">{description}</p>
+				<div className="absolute top-0 left-0 hidden h-full w-full p-4 text-center opacity-0 transition-all duration-250 group-hover:flex group-hover:items-center group-hover:justify-center group-hover:opacity-100">
+					<p className="font-secondary text-xl font-semibold">{description}</p>
 				</div>
 			</div>
 			<div className="mt-4 flex items-center justify-center">
-				<Link href={link || '#'}>
+				<Link href={link || '#'} target="_blank" rel="noreferrer">
 					<h2 className="font-secondary transition-[tracking, decoration] text-center text-xl font-semibold tracking-normal underline decoration-transparent duration-250 hover:tracking-widest hover:decoration-black">
 						{title}
 					</h2>
