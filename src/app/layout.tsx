@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import RouteTransitionLayout from '@/_layouts/RouteTransitionLayout';
 import './globals.css';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 
@@ -26,7 +27,9 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<head></head>
-			<body className={`bg-gray`}>{children}</body>
+			<RouteTransitionLayout>
+				<body className={`bg-gray transition-all duration-300 ease-in-out`}>{children}</body>
+			</RouteTransitionLayout>
 		</html>
 	);
 }

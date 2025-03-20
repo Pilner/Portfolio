@@ -18,6 +18,10 @@
 	@apply mx-auto w-[90%] sm:w-[85%] lg:w-[80%] xl:w-[75%];
 }
 
+.page-transition {
+	@apply -translate-y-2 opacity-0;
+}
+
 .animation-delay-0 {
 	animation-delay: 0ms;
 }

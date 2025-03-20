@@ -9,7 +9,7 @@ export default function Hero() {
 	return (
 		<section className="h-screen w-full">
 			<div className="relative container flex h-full w-full flex-col items-center justify-center">
-				<div className="relative h-[25rem] w-full">
+				<div className="relative aspect-square h-[25rem]">
 					<Image
 						src="/images/logo/frv-logo-black.png"
 						alt="Hero Logo"
