@@ -1,4 +1,4 @@
-export type WorkData = {
+export type TWork = {
 	companyName: string;
 	position: string;
 	startDate: Date;

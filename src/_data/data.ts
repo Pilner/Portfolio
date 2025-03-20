@@ -1,7 +1,7 @@
-import { StacksData } from '@/_types/Stacks';
-import { WorkData } from '@/_types/Work';
+import { TStacks } from '@/_types/Stacks';
+import { TWork } from '@/_types/Work';
 
-export const languagesData: StacksData[] = [
+export const languagesData: TStacks[] = [
 	{
 		url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
 		imgSrc: './images/stacks/languages/javascript.svg',
@@ -36,7 +36,7 @@ export const languagesData: StacksData[] = [
 	},
 ];
 
-export const frameworksData: StacksData[] = [
+export const frameworksData: TStacks[] = [
 	{ url: 'https://react.dev/', imgSrc: './images/stacks/frameworks/react.svg', alt: 'React.js Logo', text: 'React.js' },
 	{ url: 'https://nextjs.org/', imgSrc: './images/stacks/frameworks/nextjs.svg', alt: 'Next.js Logo', text: 'Next.js' },
 	{
@@ -83,7 +83,7 @@ export const frameworksData: StacksData[] = [
 	},
 ];
 
-export const toolsData: StacksData[] = [
+export const toolsData: TStacks[] = [
 	{ url: 'https://git-scm.com/', imgSrc: './images/stacks/tools/git.svg', alt: 'Git Logo', text: 'Git' },
 	{ url: 'https://www.docker.com/', imgSrc: './images/stacks/tools/docker.svg', alt: 'Docker Logo', text: 'Docker' },
 	{ url: '#', imgSrc: './images/stacks/tools/postman.svg', alt: 'Postman Logo', text: 'Postman' },
@@ -108,7 +108,7 @@ export const toolsData: StacksData[] = [
 	{ url: 'https://www.sqlite.org/', imgSrc: './images/stacks/tools/sqlite.svg', alt: 'SQLite Logo', text: 'SQLite' },
 ];
 
-export const osData: StacksData[] = [
+export const osData: TStacks[] = [
 	{
 		url: 'https://www.microsoft.com/en-us/windows',
 		imgSrc: './images/stacks/os/windows.svg',
@@ -124,7 +124,7 @@ export const osData: StacksData[] = [
 	},
 ];
 
-export const workData: WorkData[] = [
+export const workData: TWork[] = [
 	{
 		companyName: '8box Solutions',
 		position: 'Part-Time Frontend Web Developer',

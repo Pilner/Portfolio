@@ -1,55 +1,52 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import Image from 'next/image';
+
+import { TJsonBlock } from '@/_types/JsonBlock';
+import JsonBlock from '../ui/JsonBlock';
+import { getAge } from '@/_utils';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 export default function About() {
-	const birthday = new Date('2003-03-20');
-	const today = new Date();
-	let age = today.getFullYear() - birthday.getFullYear();
-	const monthDifference = today.getMonth() - birthday.getMonth();
-	const dayDifference = today.getDate() - birthday.getDate();
+	const age = getAge(new Date('2003-03-20'));
 
-	if (monthDifference < 0 || (monthDifference === 0 && dayDifference < 0)) {
-		age--;
-	}
-
-	const infoTable: {
-		label: string;
-		value?: string;
-		comment?: string;
-		array?: string[];
-	}[] = [
+	const infoJson: TJsonBlock[] = [
 		{
 			label: 'Name',
 			value: 'Fabian Railey Victuelles',
+			type: 'string',
 		},
 		{
 			label: 'Age',
-			value: String(age),
+			value: age,
+			type: 'number',
 		},
 		{
 			label: 'Location',
 			value: 'Philippines',
+			type: 'string',
 		},
 		{
 			label: 'Education',
 			value: 'Polytechnic University of the Philippines',
+			type: 'string',
 		},
 		{
 			label: 'Course',
 			value: 'Bachelor of Science in Computer Science',
 			comment: 'Currently 4th year',
+			type: 'string',
 		},
 		{
 			label: 'About',
-			value:
-				'I am what they call an enthusiastic coder who focuses on what needed to be fixed and developed with no loose threads attached.',
+			value: 'Computer Science Undergraduate | Part-time Frontend Developer @ 8boxSolutions Inc.',
+			type: 'string',
 		},
 		{
 			label: 'Interests',
-			array: ['Coding', 'Gaming', 'Music'],
+			value: ['Coding', 'Gaming', 'Music'],
+			type: 'array',
 		},
 	];
 
@@ -84,47 +81,8 @@ export default function About() {
 			</section>
 			<section className="h-screen w-full">
 				<div className="container flex h-full gap-4">
-					<div className="flex-1 basis-1/2 self-center rounded-xl bg-[#fafafa] p-4 text-[#383a42] shadow-lg">
-						<p className="text-2xl">
-							<code>{`{`}</code>
-						</p>
-						<table className="ml-4 table border-separate border-spacing-x-4 border-spacing-y-2 self-center">
-							<tbody>
-								{infoTable.map((info, index) => (
-									<tr key={`info-${index}`}>
-										<th className="float-start text-2xl">
-											<code>
-												<span className="text-[#e45649]">{info.label}</span>:
-											</code>
-										</th>
-										{info.value && (
-											<td className="text-2xl text-[#50a14f]">
-												<code>
-													"{info.value}" {info.comment && <span className="text-[#a0a1a7]">// {info.comment}</span>}
-												</code>
-											</td>
-										)}
-										{info.array && (
-											<td className="text-2xl text-[#50a14f]">
-												<code>
-													<span className="text-[#383a42]">[</span>
-													{info.array.map((item, index) => (
-														<Fragment key={`${item}-${index}`}>
-															{`"${item}"`}
-															{index !== info.array?.length! - 1 && <span className="text-[#383a42]">, </span>}
-														</Fragment>
-													))}
-													<span className="text-[#383a42]">]</span>
-												</code>
-											</td>
-										)}
-									</tr>
-								))}
-							</tbody>
-						</table>
-						<p className="text-2xl">
-							<code>{`}`}</code>
-						</p>
+					<div className="flex-1 basis-1/2 items-center justify-center gap-4 self-center">
+						<JsonBlock data={infoJson}></JsonBlock>
 					</div>
 					<div className="flex basis-1/2 items-center justify-center">
 						<div className="overflow relative aspect-square h-auto w-3/4">
