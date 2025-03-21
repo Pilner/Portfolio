@@ -13,7 +13,7 @@ export default function Card({ title, description, imageSrc, link }: TCard) {
 					</div>
 				</div>
 				<div className="absolute top-0 left-0 hidden h-full w-full p-4 text-center opacity-0 transition-all duration-250 group-hover:flex group-hover:items-center group-hover:justify-center group-hover:opacity-100">
-					<p className="font-secondary text-xl font-semibold">{description}</p>
+					<p className="font-secondary text-xl font-normal">{description}</p>
 				</div>
 			</div>
 			<div className="mt-4 flex items-center justify-center">

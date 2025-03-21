@@ -45,7 +45,7 @@ export default function About() {
 		},
 		{
 			label: 'Interests',
-			value: ['Coding', 'Gaming', 'Music'],
+			value: ['Coding', 'Algorithms', 'Gaming', 'Music'],
 			type: 'array',
 		},
 	];

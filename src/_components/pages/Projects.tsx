@@ -49,7 +49,7 @@ export default function Projects() {
 							<Link href="https://github.com/Pilner" className="contents" target="_blank" rel="noreferrer">
 								<Button variant="outline">
 									<p className="flex items-center gap-2 text-lg">
-										<FontAwesomeIcon icon={faGithub} /> More on Github
+										<FontAwesomeIcon icon={faGithub} /> View more on GitHub
 									</p>
 								</Button>
 							</Link>

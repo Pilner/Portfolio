@@ -45,11 +45,11 @@ export function Navbar() {
 					{TabList.map((tab, index) => (
 						<TransitionLink href={tab.url} className="contents" key={`tab-${index}`} disabled={tab.url === activeTab}>
 							<li
-								className={`group transition-[color, margin] relative z-[200] flex aspect-square h-[3rem] w-[3rem] items-center justify-center rounded-lg border border-black bg-black duration-250 hover:my-2 hover:bg-white hover:text-black ${tab.url === activeTab ? 'cursor-default bg-white text-black' : 'cursor-pointer text-white'}`}
+								className={`group transition-[color, margin] relative z-[200] flex aspect-square h-[3rem] w-[3rem] items-center justify-center rounded-lg border duration-250 hover:my-2 ${tab.url === activeTab ? 'bg-dark border-dark cursor-default text-white' : 'text-dark border-dark/50 hover:bg-dark cursor-pointer bg-white hover:text-white'}`}
 							>
 								<FontAwesomeIcon icon={tab.icon} />
-								<div className="bg-gray/25 absolute top-1/2 -right-0 z-[199] flex -translate-y-1/2 items-center justify-center rounded-lg p-1 text-black opacity-0 transition-all duration-500 group-hover:right-[125%] group-hover:opacity-100">
-									<p className="text-lg font-normal text-black">{tab.text}</p>
+								<div className="text-dark absolute top-1/2 -right-0 z-[199] flex -translate-y-1/2 items-center justify-center rounded-lg px-1 opacity-0 transition-all duration-500 group-hover:right-[125%] group-hover:opacity-100">
+									<p className="text-dark text-lg font-normal">{tab.text}</p>
 								</div>
 							</li>
 						</TransitionLink>
