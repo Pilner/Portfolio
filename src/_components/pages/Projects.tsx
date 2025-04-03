@@ -17,22 +17,19 @@ export default function Projects() {
 					</h1>
 					<div className="absolute bottom-10 flex flex-col">
 						<FontAwesomeIcon
-							size="2xl"
 							color="black"
 							icon={faChevronDown}
-							className="animation-delay-0 animate-pulse"
+							className="animation-delay-0 animate-pulse text-2xl md:text-3xl xl:text-4xl"
 						/>
 						<FontAwesomeIcon
-							size="2xl"
 							color="black"
 							icon={faChevronDown}
-							className="animation-delay-1 animate-pulse"
+							className="animation-delay-1 animate-pulse text-2xl md:text-3xl xl:text-4xl"
 						/>
 						<FontAwesomeIcon
-							size="2xl"
 							color="black"
 							icon={faChevronDown}
-							className="animation-delay-2 animate-pulse"
+							className="animation-delay-2 animate-pulse text-2xl md:text-3xl xl:text-4xl"
 						/>
 					</div>
 				</div>
