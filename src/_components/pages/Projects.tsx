@@ -12,27 +12,24 @@ export default function Projects() {
 		<>
 			<section className="h-screen w-full">
 				<div className="relative container flex h-full w-full items-center justify-center">
-					<h1 className="font-main text-7xl font-semibold">
-						Also made this awesome <span className="text-sub-accent">stuff</span>
+					<h1 className="font-main xs:text-6xl text-center text-5xl font-semibold lg:text-7xl">
+						Also made this <br className="hidden lg:inline" /> awesome <span className="text-sub-accent">stuff</span>
 					</h1>
 					<div className="absolute bottom-10 flex flex-col">
 						<FontAwesomeIcon
-							size="2xl"
 							color="black"
 							icon={faChevronDown}
-							className="animation-delay-0 animate-pulse"
+							className="animation-delay-0 animate-pulse text-2xl md:text-3xl xl:text-4xl"
 						/>
 						<FontAwesomeIcon
-							size="2xl"
 							color="black"
 							icon={faChevronDown}
-							className="animation-delay-1 animate-pulse"
+							className="animation-delay-1 animate-pulse text-2xl md:text-3xl xl:text-4xl"
 						/>
 						<FontAwesomeIcon
-							size="2xl"
 							color="black"
 							icon={faChevronDown}
-							className="animation-delay-2 animate-pulse"
+							className="animation-delay-2 animate-pulse text-2xl md:text-3xl xl:text-4xl"
 						/>
 					</div>
 				</div>
@@ -48,9 +45,12 @@ export default function Projects() {
 						<div className="mt-8 flex items-center justify-center">
 							<Link href="https://github.com/Pilner" className="contents" target="_blank" rel="noreferrer">
 								<Button variant="outline">
-									<p className="flex items-center gap-2 text-lg">
-										<FontAwesomeIcon icon={faGithub} /> View more on GitHub
-									</p>
+									<div className="flex items-center gap-2">
+										<FontAwesomeIcon icon={faGithub} />
+										<p className="text-md md:text-lg">
+											<span className="hidden md:inline">View more on </span>GitHub
+										</p>
+									</div>
 								</Button>
 							</Link>
 						</div>

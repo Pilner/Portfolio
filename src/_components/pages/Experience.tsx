@@ -28,27 +28,24 @@ export default function Experience() {
 		<>
 			<section className="h-screen w-full">
 				<div className="relative container flex h-full w-full items-center justify-center">
-					<h1 className="font-main text-7xl font-semibold">
-						I make things <span className="text-sub-accent">work</span>
+					<h1 className="font-main xs:text-6xl text-center text-5xl font-semibold lg:text-7xl">
+						I make <br className="inline md:hidden" /> things <span className="text-sub-accent">work</span>
 					</h1>
 					<div className="absolute bottom-10 flex flex-col">
 						<FontAwesomeIcon
-							size="2xl"
 							color="black"
 							icon={faChevronDown}
-							className="animation-delay-0 animate-pulse"
+							className="animation-delay-0 animate-pulse text-2xl md:text-3xl xl:text-4xl"
 						/>
 						<FontAwesomeIcon
-							size="2xl"
 							color="black"
 							icon={faChevronDown}
-							className="animation-delay-1 animate-pulse"
+							className="animation-delay-1 animate-pulse text-2xl md:text-3xl xl:text-4xl"
 						/>
 						<FontAwesomeIcon
-							size="2xl"
 							color="black"
 							icon={faChevronDown}
-							className="animation-delay-2 animate-pulse"
+							className="animation-delay-2 animate-pulse text-2xl md:text-3xl xl:text-4xl"
 						/>
 					</div>
 				</div>
@@ -62,7 +59,7 @@ export default function Experience() {
 								className={`hover:bg-dark/25 flex-1 cursor-pointer p-2 transition duration-500 ${active === languagesData ? 'bg-dark/25' : ''}`}
 							>
 								<p
-									className={`font-main transition-[tracking, decoration] text-center text-2xl tracking-normal underline duration-250 ${active === languagesData ? 'font-bold tracking-widest text-black decoration-black' : 'font-semibold text-black/25 decoration-transparent'}`}
+									className={`font-main transition-[tracking, decoration] text-center text-xs tracking-normal underline duration-250 sm:text-sm md:text-lg lg:text-2xl ${active === languagesData ? 'font-bold tracking-widest text-black decoration-black' : 'font-semibold text-black/25 decoration-transparent'}`}
 									onClick={() => {
 										if (active === languagesData) {
 											setActive(null);
@@ -78,7 +75,7 @@ export default function Experience() {
 								className={`hover:bg-dark/25 flex-1 cursor-pointer p-2 transition duration-500 ${active === frameworksData ? 'bg-dark/25' : ''}`}
 							>
 								<p
-									className={`font-main transition-[tracking, decoration] text-center text-2xl tracking-normal underline duration-250 ${active === frameworksData ? 'font-bold tracking-widest text-black decoration-black' : 'font-semibold text-black/25 decoration-transparent'}`}
+									className={`font-main transition-[tracking, decoration] text-center text-xs tracking-normal underline duration-250 sm:text-sm md:text-lg lg:text-2xl ${active === frameworksData ? 'font-bold tracking-widest text-black decoration-black' : 'font-semibold text-black/25 decoration-transparent'}`}
 									onClick={() => {
 										if (active === frameworksData) {
 											setActive(null);
@@ -94,7 +91,7 @@ export default function Experience() {
 								className={`hover:bg-dark/25 flex-1 cursor-pointer p-2 transition duration-500 ${active === toolsData ? 'bg-dark/25' : ''}`}
 							>
 								<p
-									className={`font-main transition-[tracking, decoration] text-center text-2xl tracking-normal underline duration-250 ${active === toolsData ? 'font-bold tracking-widest text-black decoration-black' : 'font-semibold text-black/25 decoration-transparent'}`}
+									className={`font-main transition-[tracking, decoration] text-center text-xs tracking-normal underline duration-250 sm:text-sm md:text-lg lg:text-2xl ${active === toolsData ? 'font-bold tracking-widest text-black decoration-black' : 'font-semibold text-black/25 decoration-transparent'}`}
 									onClick={() => {
 										if (active === toolsData) {
 											setActive(null);
@@ -110,7 +107,7 @@ export default function Experience() {
 								className={`hover:bg-dark/25 flex-1 cursor-pointer p-2 transition duration-500 ${active === osData ? 'bg-dark/25' : ''}`}
 							>
 								<p
-									className={`font-main transition-[tracking, decoration] text-center text-2xl tracking-normal underline duration-250 ${active === osData ? 'font-bold tracking-widest text-black decoration-black' : 'font-semibold text-black/25 decoration-transparent'}`}
+									className={`font-main transition-[tracking, decoration] text-center text-xs tracking-normal underline duration-250 sm:text-sm md:text-lg lg:text-2xl ${active === osData ? 'font-bold tracking-widest text-black decoration-black' : 'font-semibold text-black/25 decoration-transparent'}`}
 									onClick={() => {
 										if (active === osData) {
 											setActive(null);
@@ -123,11 +120,11 @@ export default function Experience() {
 								</p>
 							</div>
 						</div>
-						<div className={`flex w-full flex-wrap justify-center gap-4 px-4 py-8`}>
+						<div className={`flex w-full flex-wrap justify-center gap-1 px-4 py-8 sm:gap-2 md:gap-3 xl:gap-4`}>
 							{allStacks.map((stack, index) => (
 								<Link href={stack.url} className="contents" target="_blank" rel="noreferrer" key={index}>
 									<div
-										className={`bg-gray border-dark/25 group relative aspect-square h-32 w-auto rounded-lg p-2 transition duration-500 ${active && !active.includes(stack) ? 'opacity-50 blur-sm grayscale' : ''}`}
+										className={`bg-gray border-dark/25 group relative aspect-square h-16 w-auto rounded-lg p-2 transition duration-500 sm:h-20 md:h-24 lg:h-28 xl:h-30 2xl:h-32 ${active && !active.includes(stack) ? 'opacity-50 blur-sm grayscale' : ''}`}
 									>
 										<div className="transition-[opacity, color] group-hover:bg-gray relative h-full w-full duration-250 group-hover:opacity-25 group-hover:blur-sm">
 											<Image src={stack.imgSrc} alt={stack.alt} fill className="object-contain" unoptimized={false} />
@@ -146,29 +143,31 @@ export default function Experience() {
 				<div className="container my-16 flex min-h-full flex-col gap-8 rounded-xl p-4">
 					{workData.map((work, index) => (
 						<Fragment key={`work-${index}`}>
-							<div className="flex h-64 justify-between gap-16">
+							<div className="flex flex-col-reverse gap-8 lg:flex-row lg:justify-between lg:gap-16">
 								<div className="h-full">
 									<div className="mb-4 flex flex-col">
-										<div className="flex items-center gap-4">
+										<div className="flex flex-col lg:flex-row lg:items-center lg:gap-4">
 											<Link href={work.link} target="_blank" rel="noreferrer">
-												<h2 className="font-main transition-[tracking, decoration] text-2xl font-bold tracking-normal underline decoration-transparent duration-250 hover:tracking-widest hover:decoration-black">
+												<h2 className="font-main transition-[tracking, decoration] text-center text-xl font-bold tracking-normal underline decoration-transparent duration-250 hover:tracking-widest hover:decoration-black lg:text-left lg:text-2xl">
 													{work.companyName}
 												</h2>
 											</Link>
-											<p className="font-secondary text-md font-semibold">
+											<p className="font-secondary lg:text-md text-center text-sm font-semibold lg:text-left">
 												({formatDate(work.startDate)} - {formatDate(work.endDate)})
 											</p>
 										</div>
-										<p className="font-secondary text-lg font-semibold">{work.position}</p>
+										<p className="font-secondary text-md text-center font-semibold lg:text-left lg:text-lg">
+											{work.position}
+										</p>
 									</div>
-									<p className="font-secondary text-lg">{work.description}</p>
+									<p className="font-secondary text-md text-justify lg:text-left lg:text-lg">{work.description}</p>
 								</div>
-								<div className="border-dark/50 relative aspect-square h-full w-auto overflow-clip rounded-xl border">
+								<div className="border-dark/50 relative mx-auto aspect-square h-64 w-64 overflow-clip rounded-xl border">
 									<Image
 										src={work.imageSrc}
 										alt={`${work.companyName} Logo`}
 										fill
-										className="h-full w-auto object-contain"
+										className="h-auto w-auto object-contain"
 									/>
 								</div>
 							</div>

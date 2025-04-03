@@ -39,23 +39,25 @@ export function Navbar() {
 	console.log(activeTab);
 
 	return (
-		<nav className="fixed top-1/2 right-2 z-50 my-auto w-[5rem] -translate-y-1/2 py-4 opacity-25 transition-opacity duration-250 hover:opacity-100">
-			<div className="flex h-full flex-col items-center justify-center">
-				<ul className="flex flex-col gap-16">
-					{TabList.map((tab, index) => (
-						<TransitionLink href={tab.url} className="contents" key={`tab-${index}`} disabled={tab.url === activeTab}>
-							<li
-								className={`group transition-[color, margin] relative z-[200] flex aspect-square h-[3rem] w-[3rem] items-center justify-center rounded-lg border duration-250 hover:my-2 ${tab.url === activeTab ? 'bg-dark border-dark cursor-default text-white' : 'text-dark border-dark/50 hover:bg-dark cursor-pointer bg-white hover:text-white'}`}
-							>
-								<FontAwesomeIcon icon={tab.icon} />
-								<div className="text-dark absolute top-1/2 -right-0 z-[199] flex -translate-y-1/2 items-center justify-center rounded-lg px-1 opacity-0 transition-all duration-500 group-hover:right-[125%] group-hover:opacity-100">
-									<p className="text-dark text-lg font-normal">{tab.text}</p>
-								</div>
-							</li>
-						</TransitionLink>
-					))}
-				</ul>
-			</div>
-		</nav>
+		<div className="relative w-full">
+			<nav className="absolute top-2 left-1/2 z-50 my-auto w-full -translate-x-1/2 py-4 opacity-25 transition-opacity duration-250 hover:opacity-100 lg:fixed lg:top-1/2 lg:right-2 lg:left-auto lg:w-[5rem] lg:-translate-y-1/2 lg:translate-x-0">
+				<div className="flex h-full flex-row items-center justify-center lg:flex-col">
+					<ul className="flex w-3/4 flex-row justify-between sm:w-1/2 lg:flex-col lg:gap-16">
+						{TabList.map((tab, index) => (
+							<TransitionLink href={tab.url} className="contents" key={`tab-${index}`} disabled={tab.url === activeTab}>
+								<li
+									className={`group transition-[color, margin] relative z-[200] flex aspect-square h-[2.75rem] w-[2.75rem] items-center justify-center rounded-lg border duration-250 hover:my-2 sm:h-[3rem] sm:w-[3rem] ${tab.url === activeTab ? 'bg-dark border-dark cursor-default text-white' : 'text-dark border-dark/50 hover:bg-dark cursor-pointer bg-white hover:text-white'}`}
+								>
+									<FontAwesomeIcon icon={tab.icon} />
+									<div className="text-dark absolute top-1/2 right-1/2 z-[199] flex -translate-y-1/2 translate-x-1/2 items-center justify-center rounded-lg px-1 opacity-0 transition-all duration-500 group-hover:top-[150%] group-hover:opacity-100 lg:-right-0 lg:translate-x-0 lg:group-hover:top-1/2 lg:group-hover:right-[125%]">
+										<p className="text-dark text-md font-normal lg:text-lg">{tab.text}</p>
+									</div>
+								</li>
+							</TransitionLink>
+						))}
+					</ul>
+				</div>
+			</nav>
+		</div>
 	);
 }

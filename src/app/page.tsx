@@ -7,7 +7,7 @@ import Hero from '@/_components/pages/Hero';
 export default function Page() {
 	return (
 		<>
-			<main className={`h-screen overflow-y-scroll scroll-smooth`}>
+			<main className={`h-dvh overflow-y-scroll scroll-smooth`}>
 				<Navbar />
 				<Hero />
 			</main>
