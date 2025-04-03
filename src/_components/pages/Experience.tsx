@@ -1,8 +1,10 @@
-import React, { useState, useEffect, Fragment } from 'react';
+import React, { useState, Fragment } from 'react';
 import Image from 'next/image';
 
 import { languagesData, frameworksData, toolsData, osData, workData } from '@/_data/data';
 import { TStacks } from '@/_types/Stacks';
+
+import { formatDate } from '@/_utils';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
@@ -11,18 +13,6 @@ import Link from 'next/link';
 export default function Experience() {
 	const [active, setActive] = useState<TStacks[] | null>(null);
 	const allStacks = [...languagesData, ...frameworksData, ...toolsData, ...osData];
-
-	useEffect(() => {
-		// if active changes, have a loading state
-	}, [active]);
-
-	function formatDate(date: Date | false) {
-		if (date === false) {
-			return 'Present';
-		}
-
-		return new Date(date).toLocaleString('default', { month: 'short', year: 'numeric' });
-	}
 
 	return (
 		<>

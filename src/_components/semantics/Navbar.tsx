@@ -36,7 +36,7 @@ const TabList = [
 
 export function Navbar() {
 	const activeTab = usePathname();
-	console.log(activeTab);
+	// console.log(activeTab);
 
 	return (
 		<div className="relative w-full">

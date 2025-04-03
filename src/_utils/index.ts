@@ -14,3 +14,11 @@ export function getAge(birthday: Date) {
 export async function sleep(ms: number) {
 	return new Promise((resolve) => setTimeout(resolve, ms));
 }
+
+export function formatDate(date: Date | false) {
+	if (date === false) {
+		return 'Present';
+	}
+
+	return new Date(date).toLocaleString('default', { month: 'short', year: 'numeric' });
+}
