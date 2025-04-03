@@ -16,9 +16,9 @@ export default function Button({
 }: ButtonProps) {
 	const typeVariants = {
 		solid:
-			'bg-main-accent text-white border-main-accent hover:bg-white hover:text-main-accent disabled:bg-main-accent/25 disabled:text-white disabled:border-transparent disabled:pointer-events-none',
+			'bg-dark text-white border-dark hover:bg-white hover:text-dark disabled:bg-dark/25 disabled:text-white disabled:border-transparent disabled:pointer-events-none',
 		outline:
-			'border-main-accent text-main-accent hover:bg-main-accent hover:text-white disabled:bg-gray-300 disabled:text-gray-500 disabled:border-gray-300 disabled:pointer-events-none',
+			'border-dark text-dark hover:bg-dark hover:text-white disabled:bg-gray-300 disabled:text-gray-500 disabled:border-gray-300 disabled:pointer-events-none',
 	};
 
 	return (

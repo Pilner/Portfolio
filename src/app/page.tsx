@@ -1,21 +1,18 @@
 'use client';
+import React from 'react';
 
-import { Footer } from '@/_components/semantics/Footer';
 import { Navbar } from '@/_components/semantics/Navbar';
-// import { TextInput, DropdownInput } from '@/_components/ui/Input';
+import Hero from '@/_components/pages/Hero';
 
-export default function Home() {
+export default function Page() {
+	const currentYear = new Date().getFullYear();
+	console.log(`Copyright © ${currentYear} Fabian Railey Victuelles`);
 	return (
-		<main className="flex min-h-screen flex-col">
-			<Navbar />
-			<section className="h-full flex-grow">
-				<div className="container">
-					<div className="flex h-full items-center justify-between gap-4">
-						<p>Hero Page</p>
-					</div>
-				</div>
-			</section>
-			<Footer />
-		</main>
+		<>
+			<main className={`h-dvh overflow-y-scroll scroll-smooth`}>
+				<Navbar />
+				<Hero />
+			</main>
+		</>
 	);
 }
