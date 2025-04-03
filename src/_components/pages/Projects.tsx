@@ -12,8 +12,8 @@ export default function Projects() {
 		<>
 			<section className="h-screen w-full">
 				<div className="relative container flex h-full w-full items-center justify-center">
-					<h1 className="font-main text-7xl font-semibold">
-						Also made this awesome <span className="text-sub-accent">stuff</span>
+					<h1 className="font-main xs:text-6xl text-center text-5xl font-semibold lg:text-7xl">
+						Also made this <br className="hidden lg:inline" /> awesome <span className="text-sub-accent">stuff</span>
 					</h1>
 					<div className="absolute bottom-10 flex flex-col">
 						<FontAwesomeIcon
@@ -48,9 +48,12 @@ export default function Projects() {
 						<div className="mt-8 flex items-center justify-center">
 							<Link href="https://github.com/Pilner" className="contents" target="_blank" rel="noreferrer">
 								<Button variant="outline">
-									<p className="flex items-center gap-2 text-lg">
-										<FontAwesomeIcon icon={faGithub} /> View more on GitHub
-									</p>
+									<div className="flex items-center gap-2">
+										<FontAwesomeIcon icon={faGithub} />
+										<p className="text-[16px] md:text-lg">
+											<span className="hidden md:inline">View more on </span>GitHub
+										</p>
+									</div>
 								</Button>
 							</Link>
 						</div>
