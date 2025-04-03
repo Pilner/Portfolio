@@ -155,15 +155,15 @@ export default function Experience() {
 													{work.companyName}
 												</h2>
 											</Link>
-											<p className="font-secondary text-center text-sm font-semibold lg:text-left lg:text-[16px]">
+											<p className="font-secondary lg:text-md text-center text-sm font-semibold lg:text-left">
 												({formatDate(work.startDate)} - {formatDate(work.endDate)})
 											</p>
 										</div>
-										<p className="font-secondary text-center text-[16px] font-semibold lg:text-left lg:text-lg">
+										<p className="font-secondary text-md text-center font-semibold lg:text-left lg:text-lg">
 											{work.position}
 										</p>
 									</div>
-									<p className="font-secondary text-justify text-[16px] lg:text-left lg:text-lg">{work.description}</p>
+									<p className="font-secondary text-md text-justify lg:text-left lg:text-lg">{work.description}</p>
 								</div>
 								<div className="border-dark/50 relative mx-auto aspect-square h-64 w-64 overflow-clip rounded-xl border">
 									<Image

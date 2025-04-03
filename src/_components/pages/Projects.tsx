@@ -50,7 +50,7 @@ export default function Projects() {
 								<Button variant="outline">
 									<div className="flex items-center gap-2">
 										<FontAwesomeIcon icon={faGithub} />
-										<p className="text-[16px] md:text-lg">
+										<p className="text-md md:text-lg">
 											<span className="hidden md:inline">View more on </span>GitHub
 										</p>
 									</div>
