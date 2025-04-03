@@ -15,6 +15,9 @@ export default function Hero() {
 						alt="Hero Logo"
 						fill
 						className="aspect-square h-full w-auto object-contain"
+						priority
+						// 15rem, 20rem, 25rem
+						sizes="(max-width: 640px) 15rem, (max-width: 768px) 20rem, (max-width: 1024px) 25rem"
 					/>
 				</div>
 				<div className="absolute bottom-5 left-1/2 -translate-x-1/2 transform-gpu">

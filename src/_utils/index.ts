@@ -20,5 +20,5 @@ export function formatDate(date: Date | false) {
 		return 'Present';
 	}
 
-	return new Date(date).toLocaleString('default', { month: 'short', year: 'numeric' });
+	return new Date(date).toLocaleString('en-PH', { month: 'short', year: 'numeric' });
 }

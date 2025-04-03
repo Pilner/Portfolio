@@ -158,6 +158,7 @@ export default function Experience() {
 										alt={`${work.companyName} Logo`}
 										fill
 										className="h-auto w-auto object-contain"
+										sizes="16rem"
 									/>
 								</div>
 							</div>

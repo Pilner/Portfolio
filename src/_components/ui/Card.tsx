@@ -8,7 +8,7 @@ export default function Card({ title, description, imageSrc, link }: TCard) {
 		<div className="rounded-lg bg-white p-4 shadow-lg">
 			<div className="group relative overflow-hidden rounded-lg border border-black/10">
 				<div className="transition-[opacity, blur] duration-250 group-hover:opacity-50 group-hover:blur-md">
-					<div className="aspect-video h-full w-full">
+					<div className="relative aspect-video h-full w-full">
 						<Image fill src={imageSrc} alt={title} className="w-full object-cover" />
 					</div>
 				</div>

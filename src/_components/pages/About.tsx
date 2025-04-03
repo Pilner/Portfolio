@@ -88,6 +88,8 @@ export default function About() {
 								alt="My Picture"
 								fill
 								className="relative z-10 rounded-xl object-contain drop-shadow-lg"
+								// 3/4, 3/5, 3/4
+								sizes="(max-width: 640px) 3/4, (max-width: 768px) 3/5, (max-width: 1024px) 3/4"
 							/>
 							<Image
 								src="/images/background/intro-pic-bg.svg"
