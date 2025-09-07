@@ -127,12 +127,21 @@ export const osData: TStacks[] = [
 
 export const workData: TWork[] = [
 	{
+		companyName: 'Philippine Digital Asset Exchange',
+		position: 'Associate, Software Engineering',
+		startDate: new Date('2025-09'),
+		endDate: false,
+		description: 'Incoming Associate Software Engineer',
+		imageSrc: '/images/work/pdax-logo.png',
+		link: 'https://pdax.ph/',
+	},
+	{
 		companyName: '8box Solutions',
 		position: 'Part-Time Frontend Web Developer',
 		startDate: new Date('2024-11'),
-		endDate: false,
+		endDate: new Date('2025-09'),
 		description:
-			'At 8box Solutions, I contributed to the development, optimization, and maintenance of web applications for clients. I implemented Git hooks, allowing the repository to have standardized code formats across teams, leading to a more structured codebase. I worked with the team to implement new features, resolve bugs, and optimize performance. I Integrated multiple web applications with Google Maps, allowing for seamless incorporation to API usage. And I researched and tested for API efficiency, code improvements, and identified and fixed API edge cases.',
+			'At 8box Solutions, I worked with 50+ employees and contributed to the development, optimization, and maintenance of web applications for local/international clients. I implemented Git hooks, allowing the repository to have standardized code formats across teams, leading to a more structured codebase across 20+ developers. And I achieved multiple KPIs such as refactoring legacy codebases, reducing technical debt by 25% and improving maintainability.',
 		imageSrc: '/images/work/8box-solutions-logo.png',
 		link: 'https://8box.solutions/',
 	},
@@ -142,7 +151,7 @@ export const workData: TWork[] = [
 		startDate: new Date('2024-08'),
 		endDate: new Date('2024-09'),
 		description:
-			'During my internship at Lamina Studios, I was involved in proposing and developing web applications using modern web technologies. I collaborated with other interns to implement new features, fix bugs, and optimize performance. This experience helped me enhance my skills in Python, PHP, Laravel, Vue.js, MySQL, and provided valuable insights into the software development lifecycle.',
+			'During my internship at Lamina Studios, I was involved in proposing and developing web applications using modern web technologies with 15+ other developers. I contributed 70+ commits covering thousands of lines of code to the codebase using Vue.js, PHP, Laravel, Python, Flask, MySQL in the span of a single month. And I developed and integrated 65% reusable components across a project, enabling teams to efficiently adopt and maintain consistent UI patterns.',
 		imageSrc: '/images/work/lamina-studios-logo.png',
 		link: 'https://laminastudios.com/',
 	},
