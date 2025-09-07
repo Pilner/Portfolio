@@ -127,10 +127,19 @@ export const osData: TStacks[] = [
 
 export const workData: TWork[] = [
 	{
+		companyName: 'Philippine Digital Asset Exchange',
+		position: 'Associate, Software Engineering',
+		startDate: new Date('2025-09'),
+		endDate: false,
+		description: 'Incoming Associate Software Engineer',
+		imageSrc: '/images/work/pdax-logo.png',
+		link: 'https://pdax.ph/',
+	},
+	{
 		companyName: '8box Solutions',
 		position: 'Part-Time Frontend Web Developer',
 		startDate: new Date('2024-11'),
-		endDate: false,
+		endDate: new Date('2025-09'),
 		description:
 			'At 8box Solutions, I contributed to the development, optimization, and maintenance of web applications for clients. I implemented Git hooks, allowing the repository to have standardized code formats across teams, leading to a more structured codebase. I worked with the team to implement new features, resolve bugs, and optimize performance. I Integrated multiple web applications with Google Maps, allowing for seamless incorporation to API usage. And I researched and tested for API efficiency, code improvements, and identified and fixed API edge cases.',
 		imageSrc: '/images/work/8box-solutions-logo.png',

@@ -134,7 +134,7 @@ export default function Experience() {
 					{workData.map((work, index) => (
 						<Fragment key={`work-${index}`}>
 							<div className="flex flex-col-reverse gap-8 lg:flex-row lg:justify-between lg:gap-16">
-								<div className="h-full">
+								<div className="h-full w-full">
 									<div className="mb-4 flex flex-col">
 										<div className="flex flex-col lg:flex-row lg:items-center lg:gap-4">
 											<Link href={work.link} target="_blank" rel="noreferrer">
