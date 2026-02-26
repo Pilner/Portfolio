@@ -35,6 +35,12 @@ export const languagesData: TStacks[] = [
 		alt: 'CSS Logo',
 		text: 'CSS',
 	},
+	{
+		url: 'https://go.dev/',
+		imgSrc: './images/stacks/languages/go.svg',
+		alt: 'Go Logo',
+		text: 'Go',
+	},
 ];
 
 export const frameworksData: TStacks[] = [
@@ -71,6 +77,12 @@ export const frameworksData: TStacks[] = [
 		text: 'Flask',
 	},
 	{
+		url: 'https://fastapi.tiangolo.com/',
+		imgSrc: './images/stacks/frameworks/fastapi.svg',
+		alt: 'FastAPI Logo',
+		text: 'FastAPI',
+	},
+	{
 		url: 'https://pandas.pydata.org/',
 		imgSrc: './images/stacks/frameworks/pandas.svg',
 		alt: 'Pandas Logo',
@@ -85,6 +97,7 @@ export const frameworksData: TStacks[] = [
 ];
 
 export const toolsData: TStacks[] = [
+	{ url: 'https://aws.amazon.com/', imgSrc: './images/stacks/tools/aws.svg', alt: 'AWS Logo', text: 'AWS' },
 	{ url: 'https://git-scm.com/', imgSrc: './images/stacks/tools/git.svg', alt: 'Git Logo', text: 'Git' },
 	{ url: 'https://www.docker.com/', imgSrc: './images/stacks/tools/docker.svg', alt: 'Docker Logo', text: 'Docker' },
 	{ url: '#', imgSrc: './images/stacks/tools/postman.svg', alt: 'Postman Logo', text: 'Postman' },
@@ -131,7 +144,8 @@ export const workData: TWork[] = [
 		position: 'Associate, Software Engineering',
 		startDate: new Date('2025-09'),
 		endDate: false,
-		description: 'Incoming Associate Software Engineer',
+		description:
+			"As a Software Engineer at PDAX, I specialize in backend development as part of the development team that powers the company's main product. My primary responsibilities center on creating and managing scalable API endpoints that drive our main platform's core functionality. I also participate in the end-to-end development of new backend features, leveraging languages such as TypeScript and Golang to build highly efficient and maintainable systems.",
 		imageSrc: '/images/work/pdax-logo.png',
 		link: 'https://pdax.ph/',
 	},

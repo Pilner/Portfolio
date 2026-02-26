@@ -36,7 +36,7 @@ export default function Hero() {
 								className="text-dark/50 hover:text-dark aspect-square cursor-pointer rounded-lg p-[0.25rem] transition duration-250"
 							/>
 						</Link>
-						<Link href="https://www.linkedin.com/in/pilner/" target="_blank" className="contents">
+						<Link href="https://www.linkedin.com/in/raileyvictuelles/" target="_blank" className="contents">
 							<FontAwesomeIcon
 								size="2x"
 								icon={faLinkedin}
