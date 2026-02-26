@@ -35,17 +35,17 @@ export default function About() {
 		{
 			label: 'Course',
 			value: 'Bachelor of Science in Computer Science',
-			comment: 'Currently 4th year',
+			// comment: 'What the helly',
 			type: 'string',
 		},
 		{
 			label: 'About',
-			value: 'Computer Science Undergraduate | Part-time Frontend Developer @ 8boxSolutions Inc.',
+			value: 'Associate Software Engineer @ PDAX',
 			type: 'string',
 		},
 		{
 			label: 'Interests',
-			value: ['Coding', 'Algorithms', 'Gaming', 'Music'],
+			value: ['Coding', 'Algorithms', 'Gaming', 'Music', 'Architecture', 'System Design'],
 			type: 'array',
 		},
 	];
