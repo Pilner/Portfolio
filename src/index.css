@@ -13,9 +13,9 @@
 @layer base {
   h1.font-title {
     font-family: var(--font-title);
-    font-size: 100px;
+    font-size: 60px;
     font-weight: 700;
-    line-height: 100px;
+    line-height: 72px;
   }
 
   h1 {
@@ -91,4 +91,8 @@
 
 :root {
   background-color: var(--color-primary-white);
+}
+
+.container {
+  @apply mx-auto w-[90%] sm:w-[85%] lg:w-[80%] xl:w-[75%];
 }

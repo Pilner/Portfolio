@@ -30,7 +30,7 @@ const tabs = [
 
 export default function HomeNavbar() {
   return (
-    <div className='group absolute right-0 flex h-full items-center justify-center'>
+    <div className='group fixed right-0 flex h-full items-center justify-center'>
       <div className='visible absolute duration-250 ease-in-out group-hover:invisible group-hover:opacity-0'>
         <FontAwesomeIcon icon={faAnglesLeft} size='lg' />
       </div>

@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router';
 import HomeLayout from './layouts/HomeLayout';
+import AboutPage from './pages/About';
 import HomePage from './pages/Home';
 
 export default function App() {
@@ -7,6 +8,7 @@ export default function App() {
     <Routes>
       <Route element={<HomeLayout />}>
         <Route path='/' index element={<HomePage />}></Route>
+        <Route path='/about' index element={<AboutPage />}></Route>
       </Route>
     </Routes>
   );
