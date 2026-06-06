@@ -53,7 +53,7 @@ export default function HomeNavbar() {
               >
                 <FontAwesomeIcon icon={tab.icon} />
                 <div className='text-primary-black absolute top-1/2 right-0 z-199 flex translate-x-0 -translate-y-1/2 items-center justify-center rounded-lg px-1 opacity-0 transition-all duration-500 group-hover/item:top-1/2 group-hover/item:right-[125%] group-hover/item:opacity-100'>
-                  <p className='text-primary-black small font-bold'>{tab.text}</p>
+                  <p className='text-primary-black text-sm font-bold'>{tab.text}</p>
                 </div>
               </Link>
             </li>

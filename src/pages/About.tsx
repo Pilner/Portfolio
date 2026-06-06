@@ -4,30 +4,30 @@ import { AboutInfoJson } from '@src/utils/constants/AboutInfoJson';
 
 export default function AboutPage() {
   return (
-    <main className='min-h-screen'>
-      <div className='flex h-screen items-center justify-center'>
-        <h1 className='font-title'>This is me</h1>
-      </div>
-      <div className='min-h-screen'>
-        <div className='container flex h-screen'>
+    <main>
+      <section className='flex h-screen items-center justify-center'>
+        <h1 className='font-title text-[40px] font-bold sm:text-[48px] lg:text-[60px]'>This is me</h1>
+      </section>
+      <section className='min-h-screen py-32 xl:pb-0'>
+        <div className='container flex flex-col-reverse gap-8 xl:h-screen xl:flex-row xl:gap-8'>
           <div className='flex h-full w-full items-center'>
             <JsonBlock data={AboutInfoJson} />
           </div>
-          <div className='flex h-full w-full items-center justify-center'>
+          <div className='relative flex h-1/2 w-full items-center justify-center xl:h-full'>
             <img
               src={Portrait}
               alt="Railey's Picture"
-              className='relative z-10 aspect-square h-1/2 rounded-xl shadow-2xl'
+              className='xs:w-3/5 z-10 aspect-square w-4/5 rounded-xl shadow-2xl md:w-2/3 lg:w-1/2 xl:h-1/2 xl:w-auto'
             />
             <img
               src={Portrait}
               alt=''
               aria-hidden='true'
-              className='absolute aspect-square h-5/9 rounded-xl shadow-2xl blur-xl grayscale'
+              className='xs:w-3/5 absolute aspect-square w-4/5 translate-5 rounded-xl shadow-2xl blur-md grayscale md:w-2/3 lg:w-1/2 xl:h-1/2 xl:w-auto'
             />
           </div>
         </div>
-      </div>
+      </section>
     </main>
   );
 }
