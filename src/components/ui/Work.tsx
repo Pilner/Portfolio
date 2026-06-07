@@ -11,11 +11,13 @@ export default function Work() {
           <div className='flex flex-col-reverse gap-8 lg:flex-row lg:justify-between lg:gap-16'>
             <div className='h-full w-full'>
               <div className='mb-4 flex flex-col'>
-                <Link to={work.link} target='_blank' rel='noreferrer'>
-                  <h2 className='transition-[tracking, decoration] text-md text-center font-bold tracking-normal underline decoration-transparent duration-250 hover:tracking-widest hover:decoration-black lg:text-left lg:text-xl'>
-                    {work.companyName}
-                  </h2>
-                </Link>
+                <h2 className='text-md text-center font-bold lg:text-left lg:text-xl'>
+                  <Link to={work.link} target='_blank' rel='noreferrer'>
+                    <span className='transition-[tracking, decoration] tracking-normal underline decoration-transparent duration-250 hover:tracking-widest hover:decoration-black'>
+                      {work.companyName}
+                    </span>
+                  </Link>
+                </h2>
                 <p className='text-center text-sm font-semibold lg:text-left'>
                   {formatDate(work.startDate)} - {formatDate(work.endDate)}
                 </p>
@@ -38,8 +40,8 @@ export default function Work() {
   );
 }
 
-function formatDate(date: Date | false): string {
-  if (date === false) {
+function formatDate(date?: Date): string {
+  if (!date) {
     return 'Present';
   }
   return new Date(date).toLocaleString('en-PH', { month: 'short', year: 'numeric' });

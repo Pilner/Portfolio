@@ -5,7 +5,9 @@ export default function ExperiencePage() {
   return (
     <main className='flex flex-col'>
       <section className='flex h-screen items-center justify-center'>
-        <h1 className='font-title text-[40px] font-bold sm:text-[48px] lg:text-[60px]'>I make things work</h1>
+        <h1 className='font-title text-center text-[40px] leading-15 font-bold sm:text-[48px] lg:text-[60px]'>
+          I make things work
+        </h1>
       </section>
       <section className='min-h-screen py-32'>
         <div className='container flex flex-col gap-32'>

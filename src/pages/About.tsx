@@ -6,7 +6,9 @@ export default function AboutPage() {
   return (
     <main>
       <section className='flex h-screen items-center justify-center'>
-        <h1 className='font-title text-[40px] font-bold sm:text-[48px] lg:text-[60px]'>This is me</h1>
+        <h1 className='font-title text-center text-[40px] leading-15 font-bold sm:text-[48px] lg:text-[60px]'>
+          This is me
+        </h1>
       </section>
       <section className='min-h-screen py-32 xl:pb-0'>
         <div className='container flex flex-col-reverse gap-8 xl:h-screen xl:flex-row xl:gap-8'>

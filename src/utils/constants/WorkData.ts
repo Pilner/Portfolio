@@ -9,7 +9,6 @@ export const WorkData: TWork[] = [
     companyName: 'Philippine Digital Asset Exchange',
     position: 'Associate, Software Engineering',
     startDate: new Date('2025-09'),
-    endDate: false,
     description:
       "As a Software Engineer at PDAX, I specialize in backend development as part of the development team that powers the company's main product. My primary responsibilities center on creating and managing scalable API endpoints that drive our main platform's core functionality. I also participate in the end-to-end development of new backend features, leveraging languages such as TypeScript and Golang to build highly efficient and maintainable systems.",
     imageSrc: PDAXLogo,
