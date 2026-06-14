@@ -1,10 +1,10 @@
-import type { TStacks } from '@src/types/TStacks';
+import type { TStack } from '@src/types/TStacks';
 import { AllStacks, FrameworksData, LanguagesData, OSData, ToolsData } from '@src/utils/constants/StacksData';
 import { Fragment, useState } from 'react';
 import { Link } from 'react-router';
 
 export default function Stacks() {
-  const [active, setActive] = useState<TStacks[] | null>(null);
+  const [active, setActive] = useState<TStack[] | null>(null);
 
   return (
     <div className='flex h-full w-full flex-col items-center gap-4'>
@@ -37,10 +37,10 @@ function TabSelector({
   active,
   setActive,
 }: {
-  active: TStacks[] | null;
-  setActive: React.Dispatch<React.SetStateAction<TStacks[] | null>>;
+  active: TStack[] | null;
+  setActive: React.Dispatch<React.SetStateAction<TStack[] | null>>;
 }) {
-  const list: { name: string; data: TStacks[] }[] = [
+  const list: { name: string; data: TStack[] }[] = [
     {
       name: 'Languages',
       data: LanguagesData,

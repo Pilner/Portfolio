@@ -1,4 +1,4 @@
-import type { TStacks } from '@src/types/TStacks';
+import type { TStack } from '@src/types/TStacks';
 
 // Languages
 import CLogo from '@src/assets/stacks/languages/c.svg';
@@ -37,140 +37,183 @@ import LinuxLogo from '@src/assets/stacks/os/linux.svg';
 import MacosLogo from '@src/assets/stacks/os/macos.svg';
 import WindowsLogo from '@src/assets/stacks/os/windows.svg';
 
-export const LanguagesData: TStacks[] = [
-  {
-    url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
-    imageSrc: JavaScriptLogo,
-    alt: 'JavaScript Logo',
-    text: 'JavaScript',
-  },
-  {
-    url: 'https://www.typescriptlang.org/',
-    imageSrc: TypeScriptLogo,
-    alt: 'TypeScript Logo',
-    text: 'TypeScript',
-  },
-  { url: 'https://www.cprogramming.com/', imageSrc: CLogo, alt: 'C Logo', text: 'C' },
-  { url: 'https://cplusplus.com/', imageSrc: CppLogo, alt: 'CPP Logo', text: 'C++' },
-  {
-    url: 'https://www.python.org/',
-    imageSrc: PythonLogo,
-    alt: 'Python Logo',
-    text: 'Python',
-  },
-  {
-    url: 'https://en.wikipedia.org/wiki/HTML',
-    imageSrc: HtmlLogo,
-    alt: 'HTML Logo',
-    text: 'HTML',
-  },
-  {
-    url: 'https://en.wikipedia.org/wiki/CSS',
-    imageSrc: CssLogo,
-    alt: 'CSS Logo',
-    text: 'CSS',
-  },
-  {
-    url: 'https://go.dev/',
-    imageSrc: GoLogo,
-    alt: 'Go Logo',
-    text: 'Go',
-  },
-  {
-    url: 'https://www.postgresql.org/',
-    imageSrc: PostgresqlLogo,
-    alt: 'PostgreSQL Logo',
-    text: 'PostgreSQL',
-  },
-  { url: 'https://www.sqlite.org/', imageSrc: SqliteLogo, alt: 'SQLite Logo', text: 'SQLite' },
+// Languages Data
+export const JavaScript: TStack = {
+  url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
+  imageSrc: JavaScriptLogo,
+  alt: 'JavaScript Logo',
+  text: 'JavaScript',
+};
+export const TypeScript: TStack = {
+  url: 'https://www.typescriptlang.org/',
+  imageSrc: TypeScriptLogo,
+  alt: 'TypeScript Logo',
+  text: 'TypeScript',
+};
+export const C: TStack = { url: 'https://www.cprogramming.com/', imageSrc: CLogo, alt: 'C Logo', text: 'C' };
+export const CPP: TStack = { url: 'https://cplusplus.com/', imageSrc: CppLogo, alt: 'CPP Logo', text: 'C++' };
+export const Python: TStack = {
+  url: 'https://www.python.org/',
+  imageSrc: PythonLogo,
+  alt: 'Python Logo',
+  text: 'Python',
+};
+export const HTML: TStack = {
+  url: 'https://en.wikipedia.org/wiki/HTML',
+  imageSrc: HtmlLogo,
+  alt: 'HTML Logo',
+  text: 'HTML',
+};
+export const CSS: TStack = {
+  url: 'https://en.wikipedia.org/wiki/CSS',
+  imageSrc: CssLogo,
+  alt: 'CSS Logo',
+  text: 'CSS',
+};
+export const Go: TStack = {
+  url: 'https://go.dev/',
+  imageSrc: GoLogo,
+  alt: 'Go Logo',
+  text: 'Go',
+};
+export const PostgreSQL: TStack = {
+  url: 'https://www.postgresql.org/',
+  imageSrc: PostgresqlLogo,
+  alt: 'PostgreSQL Logo',
+  text: 'PostgreSQL',
+};
+export const SQLite: TStack = {
+  url: 'https://www.sqlite.org/',
+  imageSrc: SqliteLogo,
+  alt: 'SQLite Logo',
+  text: 'SQLite',
+};
+export const LanguagesData: TStack[] = [JavaScript, TypeScript, C, CPP, Python, HTML, CSS, Go, PostgreSQL, SQLite];
+
+// Frameworks Data
+export const ReactJS: TStack = {
+  url: 'https://react.dev/',
+  imageSrc: ReactLogo,
+  alt: 'React.js Logo',
+  text: 'React.js',
+};
+export const NextJS: TStack = {
+  url: 'https://nextjs.org/',
+  imageSrc: NextjsLogo,
+  alt: 'Next.js Logo',
+  text: 'Next.js',
+};
+export const TailwindCSS: TStack = {
+  url: 'https://tailwindcss.com/',
+  imageSrc: TailwindcssLogo,
+  alt: 'TailwindCSS Logo',
+  text: 'TailwindCSS',
+};
+export const Bootstrap: TStack = {
+  url: 'https://getbootstrap.com/',
+  imageSrc: BootstrapLogo,
+  alt: 'Bootstrap Logo',
+  text: 'Bootstrap',
+};
+export const NodeJS: TStack = {
+  url: 'https://nodejs.org/en',
+  imageSrc: NodejsLogo,
+  alt: 'Node.js Logo',
+  text: 'Node.js',
+};
+export const ExpressJS: TStack = {
+  url: 'https://expressjs.com/',
+  imageSrc: ExpressLogo,
+  alt: 'Express Logo',
+  text: 'Express',
+};
+export const Flask: TStack = {
+  url: 'https://flask.palletsprojects.com/en/stable/',
+  imageSrc: FlaskLogo,
+  alt: 'Flask Logo',
+  text: 'Flask',
+};
+export const FastAPI: TStack = {
+  url: 'https://fastapi.tiangolo.com/',
+  imageSrc: FastapiLogo,
+  alt: 'FastAPI Logo',
+  text: 'FastAPI',
+};
+export const Chi: TStack = {
+  url: 'https://go-chi.io/',
+  imageSrc: ChiLogo,
+  alt: 'Chi Logo',
+  text: 'Chi',
+};
+export const Pandas: TStack = {
+  url: 'https://pandas.pydata.org/',
+  imageSrc: PandasLogo,
+  alt: 'Pandas Logo',
+  text: 'Pandas',
+};
+export const Mapbox: TStack = {
+  url: 'https://www.mapbox.com/',
+  imageSrc: MapboxLogo,
+  alt: 'Mapbox Logo',
+  text: 'Mapbox',
+};
+export const Prisma: TStack = {
+  url: 'https://www.prisma.io/',
+  imageSrc: PrismaLogo,
+  alt: 'Prisma Logo',
+  text: 'Prisma',
+};
+export const FrameworksData: TStack[] = [
+  ReactJS,
+  NextJS,
+  TailwindCSS,
+  Bootstrap,
+  NodeJS,
+  ExpressJS,
+  Flask,
+  FastAPI,
+  Chi,
+  Pandas,
+  Mapbox,
+  Prisma,
 ];
 
-export const FrameworksData: TStacks[] = [
-  { url: 'https://react.dev/', imageSrc: ReactLogo, alt: 'React.js Logo', text: 'React.js' },
-  { url: 'https://nextjs.org/', imageSrc: NextjsLogo, alt: 'Next.js Logo', text: 'Next.js' },
-  {
-    url: 'https://tailwindcss.com/',
-    imageSrc: TailwindcssLogo,
-    alt: 'TailwindCSS Logo',
-    text: 'TailwindCSS',
-  },
-  {
-    url: 'https://getbootstrap.com/',
-    imageSrc: BootstrapLogo,
-    alt: 'Bootstrap Logo',
-    text: 'Bootstrap',
-  },
-  {
-    url: 'https://nodejs.org/en',
-    imageSrc: NodejsLogo,
-    alt: 'Node.js Logo',
-    text: 'Node.js',
-  },
-  {
-    url: 'https://expressjs.com/',
-    imageSrc: ExpressLogo,
-    alt: 'Express Logo',
-    text: 'Express',
-  },
-  {
-    url: 'https://flask.palletsprojects.com/en/stable/',
-    imageSrc: FlaskLogo,
-    alt: 'Flask Logo',
-    text: 'Flask',
-  },
-  {
-    url: 'https://fastapi.tiangolo.com/',
-    imageSrc: FastapiLogo,
-    alt: 'FastAPI Logo',
-    text: 'FastAPI',
-  },
-  {
-    url: 'https://go-chi.io/',
-    imageSrc: ChiLogo,
-    alt: 'Chi Logo',
-    text: 'Chi',
-  },
-  {
-    url: 'https://pandas.pydata.org/',
-    imageSrc: PandasLogo,
-    alt: 'Pandas Logo',
-    text: 'Pandas',
-  },
-  {
-    url: 'https://www.mapbox.com/',
-    imageSrc: MapboxLogo,
-    alt: 'Mapbox Logo',
-    text: 'Mapbox',
-  },
-  {
-    url: 'https://www.prisma.io/',
-    imageSrc: PrismaLogo,
-    alt: 'Prisma Logo',
-    text: 'Prisma',
-  },
-];
+// Tools Data
+export const AWS: TStack = { url: 'https://aws.amazon.com/', imageSrc: AwsLogo, alt: 'AWS Logo', text: 'AWS' };
+export const Git: TStack = { url: 'https://git-scm.com/', imageSrc: GitLogo, alt: 'Git Logo', text: 'Git' };
+export const Docker: TStack = {
+  url: 'https://www.docker.com/',
+  imageSrc: DockerLogo,
+  alt: 'Docker Logo',
+  text: 'Docker',
+};
+export const Postman: TStack = {
+  url: 'https://www.postman.com/',
+  imageSrc: PostmanLogo,
+  alt: 'Postman Logo',
+  text: 'Postman',
+};
+export const ToolsData: TStack[] = [AWS, Git, Docker, Postman];
 
-export const ToolsData: TStacks[] = [
-  { url: 'https://aws.amazon.com/', imageSrc: AwsLogo, alt: 'AWS Logo', text: 'AWS' },
-  { url: 'https://git-scm.com/', imageSrc: GitLogo, alt: 'Git Logo', text: 'Git' },
-  { url: 'https://www.docker.com/', imageSrc: DockerLogo, alt: 'Docker Logo', text: 'Docker' },
-  { url: 'https://www.postman.com/', imageSrc: PostmanLogo, alt: 'Postman Logo', text: 'Postman' },
-];
+// OS Data
+export const Windows: TStack = {
+  url: 'https://www.microsoft.com/en-us/windows',
+  imageSrc: WindowsLogo,
+  alt: 'Windows Logo',
+  text: 'Windows',
+};
+export const Linux: TStack = {
+  url: 'https://www.linux.org/',
+  imageSrc: LinuxLogo,
+  alt: 'Linux Logo',
+  text: 'Linux',
+};
+export const MacOS: TStack = {
+  url: 'https://www.apple.com/macos/',
+  imageSrc: MacosLogo,
+  alt: 'MacOS Logo',
+  text: 'MacOS',
+};
+export const OSData: TStack[] = [Windows, Linux, MacOS];
 
-export const OSData: TStacks[] = [
-  {
-    url: 'https://www.microsoft.com/en-us/windows',
-    imageSrc: WindowsLogo,
-    alt: 'Windows Logo',
-    text: 'Windows',
-  },
-  { url: 'https://www.linux.org/', imageSrc: LinuxLogo, alt: 'Linux Logo', text: 'Linux' },
-  {
-    url: 'https://www.apple.com/macos/',
-    imageSrc: MacosLogo,
-    alt: 'MacOS Logo',
-    text: 'MacOS',
-  },
-];
-
-export const AllStacks: TStacks[] = [...LanguagesData, ...FrameworksData, ...ToolsData, ...OSData];
+export const AllStacks: TStack[] = [...LanguagesData, ...FrameworksData, ...ToolsData, ...OSData];
