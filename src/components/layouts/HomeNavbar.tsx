@@ -34,13 +34,13 @@ export default function HomeNavbar() {
   const { pathname } = useLocation();
 
   return (
-    <div className='group fixed right-0 flex h-full items-center justify-center'>
-      <div className='visible absolute duration-250 ease-in-out group-hover:invisible group-hover:opacity-0'>
+    <div className='group absolute z-999 flex w-full justify-center lg:fixed lg:right-0 lg:h-full lg:w-auto lg:items-center'>
+      <div className='visible absolute hidden duration-250 ease-in-out group-hover:invisible group-hover:opacity-0 lg:block'>
         <FontAwesomeIcon icon={faAnglesLeft} size='lg' />
       </div>
 
-      <nav className='invisible translate-x-4 p-4 opacity-0 transition-all duration-250 ease-in-out group-hover:visible group-hover:translate-x-0 group-hover:opacity-100'>
-        <ul className='relative flex flex-col justify-between gap-10'>
+      <nav className='p-4 transition-all duration-250 ease-in-out lg:invisible lg:translate-x-4 lg:opacity-0 lg:group-hover:visible lg:group-hover:translate-x-0 lg:group-hover:opacity-100'>
+        <ul className='relative flex flex-row justify-between gap-10 lg:flex-col'>
           {tabs.map((tab) => (
             <li
               key={tab.name}
@@ -52,7 +52,7 @@ export default function HomeNavbar() {
                 className={`flex h-full w-full items-center justify-center ${pathname === tab.url ? 'cursor-default' : 'cursor-pointer'}`}
               >
                 <FontAwesomeIcon icon={tab.icon} />
-                <div className='text-primary-black absolute top-1/2 right-0 z-199 flex translate-x-0 -translate-y-1/2 items-center justify-center rounded-lg px-1 opacity-0 transition-all duration-500 group-hover/item:top-1/2 group-hover/item:right-[125%] group-hover/item:opacity-100'>
+                <div className='text-primary-black absolute top-1/2 z-199 flex translate-x-0 -translate-y-1/2 items-center justify-center rounded-lg px-1 opacity-0 transition-all duration-500 group-hover/item:top-[150%] group-hover/item:opacity-100 lg:right-0 lg:group-hover/item:top-1/2 lg:group-hover/item:right-[125%]'>
                   <p className='text-primary-black text-sm font-bold'>{tab.text}</p>
                 </div>
               </Link>
