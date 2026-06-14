@@ -14,7 +14,13 @@ export default function Stacks() {
         </div>
         <div className={`flex w-full flex-wrap justify-center gap-1 px-4 py-8 sm:gap-2 md:gap-3 xl:gap-4`}>
           {AllStacks.map((stack, index) => (
-            <Link to={stack.url} className='contents' target='_blank' rel='noreferrer' key={index}>
+            <Link
+              to={stack.url}
+              className='contents'
+              target='_blank'
+              rel='noreferrer'
+              key={`stack-${stack.text}-${index}`}
+            >
               <div
                 className={`group relative aspect-square h-16 w-auto rounded-lg border-black/25 p-2 transition duration-500 sm:h-20 md:h-24 lg:h-28 xl:h-30 2xl:h-32 ${active && !active.includes(stack) ? 'opacity-50 blur-sm grayscale' : ''}`}
               >
@@ -52,10 +58,10 @@ function TabSelector({
 
   return (
     <Fragment>
-      {list.map((item) => (
+      {list.map((item, index) => (
         <div
           className={`flex-1 cursor-pointer p-2 transition duration-500 hover:bg-black/25 ${active === item.data ? 'bg-black/25' : ''}`}
-          key={`TabSelector-${item.name}`}
+          key={`tab-selector-${item.name}-${index}`}
         >
           <p
             className={`transition-[tracking, decoration] text-center text-sm tracking-normal underline duration-250 md:text-lg lg:text-xl ${active === item.data ? 'font-bold tracking-widest text-black decoration-black' : 'font-semibold text-black/25 decoration-transparent'}`}

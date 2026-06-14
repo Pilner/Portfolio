@@ -41,9 +41,9 @@ export default function HomeNavbar() {
 
       <nav className='p-4 transition-all duration-250 ease-in-out lg:invisible lg:translate-x-4 lg:opacity-0 lg:group-hover:visible lg:group-hover:translate-x-0 lg:group-hover:opacity-100'>
         <ul className='relative flex flex-row justify-between gap-10 lg:flex-col'>
-          {tabs.map((tab) => (
+          {tabs.map((tab, index) => (
             <li
-              key={tab.name}
+              key={`home-navbar-tab-${tab.name}-${index}`}
               className={`group/item border-primary-black/50 relative aspect-square h-12 rounded-full border transition-[color,margin] duration-250 ${pathname === tab.url ? 'bg-primary-black text-primary-white' : 'hover:bg-primary-black hover:text-primary-white bg-primary-white'}`}
             >
               <Link

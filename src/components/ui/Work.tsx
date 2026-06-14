@@ -7,7 +7,7 @@ export default function Work() {
   return (
     <div className='flex min-h-full flex-col gap-8 rounded-xl px-4'>
       {WorkData.map((work, index) => (
-        <Fragment key={`work-${index}`}>
+        <Fragment key={`work-${work.companyName}-${index}`}>
           <div className='flex flex-col-reverse gap-8 lg:flex-row lg:justify-between lg:gap-16'>
             <div className='h-full w-full'>
               <div className='mb-4 flex flex-col'>

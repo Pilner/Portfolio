@@ -9,7 +9,7 @@ export default function Projects() {
     <section className='min-h-screen py-32'>
       <div className='container flex flex-col gap-32 px-4'>
         {ProjectsData.map((project, index) => (
-          <Fragment>
+          <Fragment key={`project-${project.title}-${index}`}>
             <div
               className={`flex flex-col-reverse gap-8 lg:justify-between lg:gap-16 ${index % 2 ? 'lg:flex-row-reverse' : 'lg:flex-row'}`}
               key={`project-${project.title}-${index}`}
@@ -33,9 +33,9 @@ export default function Projects() {
                     </Link>
                   </h2>
                   <div className='flex flex-wrap items-center justify-center gap-4 lg:justify-start'>
-                    {project.stacks.map((stack) => (
+                    {project.stacks.map((stack, index) => (
                       <div
-                        key={`stack-${project.title}-${stack.text}`}
+                        key={`project-${project.title}-stack-${stack.text}-${index}`}
                         className='h-10 rounded-xl border border-black/25 p-2 lg:h-12'
                         title={stack.text}
                       >

@@ -29,7 +29,7 @@ export default function JsonBlock({ data }: IJsonBlockProps) {
         <table className='table border-separate border-spacing-x-4 border-spacing-y-2 self-center text-lg lg:text-xl 2xl:text-2xl'>
           <tbody>
             {data.map((info, index) => (
-              <tr key={`info-${index}`}>
+              <tr key={`json-block-info-${info.label}-${index}`}>
                 <th className='float-start font-bold'>
                   <code>
                     <span className='text-[#e45649]'>{info.label}</span>:
@@ -56,7 +56,7 @@ export default function JsonBlock({ data }: IJsonBlockProps) {
                       <span className='text-[#383a42]'>[</span>
 
                       {(info.value as (string | number)[]).map((item, index) => (
-                        <Fragment key={`${item}-${index}`}>
+                        <Fragment key={`json-block-info-${info.label}-${index}-array-${item}-${index}`}>
                           {typeof item === 'string' ? (
                             <span className='text-[#50a14f]'>{`"${item}"`}</span>
                           ) : (
