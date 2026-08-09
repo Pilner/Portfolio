@@ -1,0 +1,49 @@
+name: Auto Version Bump on Release PR
+
+on:
+  pull_request:
+    branches:
+      - main
+    types: [opened, synchronize]
+
+permissions:
+  contents: write
+
+jobs:
+  bump-version:
+    if: github.event.pull_request.head.ref == 'dev'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          ref: dev
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+
+      - name: Check if already bumped
+        id: check
+        run: |
+          LAST_COMMIT=$(git log -1 --pretty=%B)
+          if [[ "$LAST_COMMIT" == chore\(release\)* ]]; then
+            echo "skip=true" >> $GITHUB_OUTPUT
+          else
+            echo "skip=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Bump Version and Update Changelog
+        if: steps.check.outputs.skip == 'false'
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+          # Generates changelog and bumps package.json based on commit history
+          # --skip.tag ensures the tag is NOT created yet
+          npx commit-and-tag-version --skip.tag
+
+          git push origin dev
