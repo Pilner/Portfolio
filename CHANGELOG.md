@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.1.1](https://github.com/Pilner/Portfolio/compare/v1.1.0...v1.1.1) (2026-08-09)
+
+### Bug Fixes
+
+* logoView not creating on localStorage on start ([67a018e](https://github.com/Pilner/Portfolio/commit/67a018e33ca409bafc6dd9eab16575ea76195b0c))
 ## 1.1.0 (2026-08-09)
 
 ### Features
