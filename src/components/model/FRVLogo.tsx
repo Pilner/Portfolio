@@ -1,6 +1,6 @@
 import { useGLTF } from '@react-three/drei';
 import type { ThreeElements } from '@react-three/fiber';
-import { useEffect, useRef } from 'react';
+import { useLayoutEffect, useRef } from 'react';
 import * as THREE from 'three';
 
 export default function FRVLogoModel(props: ThreeElements['group']) {
@@ -8,7 +8,7 @@ export default function FRVLogoModel(props: ThreeElements['group']) {
   const groupRef = useRef<THREE.Group | null>(null);
 
   // center the loaded model by computing its bounding box and offsetting
-  useEffect(() => {
+  useLayoutEffect(() => {
     const g = groupRef.current;
     if (!g) return;
     const box = new THREE.Box3().setFromObject(g);
