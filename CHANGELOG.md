@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.1.2](https://github.com/Pilner/Portfolio/compare/v1.1.1...v1.1.2) (2026-08-09)
+
+### Bug Fixes
+
+* update dependencies ([1829e04](https://github.com/Pilner/Portfolio/commit/1829e04e8197ae4983bea142377155e2d8645044))
 ## [1.1.1](https://github.com/Pilner/Portfolio/compare/v1.1.0...v1.1.1) (2026-08-09)
 
 ### Bug Fixes
