@@ -1,14 +1,16 @@
 import Portrait from '@src/assets/pictures/portrait.jpg';
 import JsonBlock from '@src/components/ui/JsonBlock';
+import ScrollHint from '@src/components/ui/ScrollHint';
 import { AboutInfoJson } from '@src/utils/constants/AboutInfoJson';
 
 export default function AboutPage() {
   return (
     <main>
-      <section className='flex h-screen items-center justify-center'>
+      <section className='relative flex h-screen items-center justify-center'>
         <h1 className='font-title text-center text-[40px] leading-15 font-bold sm:text-[48px] lg:text-[60px]'>
           This is me
         </h1>
+        <ScrollHint />
       </section>
       <section className='min-h-screen py-32 xl:pb-0'>
         <div className='container flex flex-col-reverse gap-8 xl:h-screen xl:flex-row xl:gap-8'>

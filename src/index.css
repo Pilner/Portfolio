@@ -14,6 +14,11 @@
   background-color: var(--color-primary-white);
 }
 
+/* Hide Scrollbar */
+::-webkit-scrollbar {
+  display: none;
+}
+
 .container {
   @apply mx-auto w-[90%] sm:w-[85%] lg:w-[80%] xl:w-[75%];
 }
