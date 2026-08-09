@@ -11,9 +11,9 @@ export function PersonalizationProvider({ children }: { children: React.ReactNod
       } catch {
         /* Ignore parse error */
       }
-      localStorage.setItem('logoView', '2d');
-      return '2d';
     }
+    localStorage.setItem('logoView', '2d');
+    return '2d';
   });
 
   return (
